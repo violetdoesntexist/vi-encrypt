@@ -41,4 +41,10 @@ elif(choice == "E"):
             time.sleep(0.5)
     print("your key is " + encryption_key)
     print("your string is " + string)
-    
+elif(choice == "I"):
+    print(
+        """made by violetdoesntexist
+        mit licensed full open source
+        violetdoesntexist on github discord insta and more+
+        hope you like this little dumb program of mine! :3 """
+    )
