@@ -22,12 +22,12 @@ choice = input("choose: ")
 if(choice == "D"):
     encryption_key = input("enter key: ")
     string = input("enter string: ")
-    decrypted = string
-    while(alphnum < 25 ):
-        decrypted = decrypted.replace(encryption_key[alphnum], alphabet[alphnum] )
-        print("replaced " + encryption_key[alphnum] + " with " + alphabet[alphnum] + " " + decrypted)
-        alphnum = alphnum + 1
-        time.sleep(0.5)
+    decrypted = " "
+    for char in string:
+        if char in alphabet:
+            decrypted += alphabet[encryption_key.index(char)]
+        else:
+            decrypted += char
 
     print("string " + string + " decrypted with key  " + encryption_key)
     print("result " + decrypted)
@@ -35,12 +35,12 @@ elif(choice == "E"):
     encryption_key = ''.join(random.sample(alphabet, len(alphabet)))
     print("your key is:" + encryption_key)
     string = input("enter string: ")
-    encrypted = string
-    while(alphnum < 25 ):
-            encrypted = encrypted.replace(alphabet[alphnum], encryption_key[alphnum] )
-            print("replaced " + alphabet[alphnum] + " with " + encryption_key[alphnum] + " " + encrypted)
-            alphnum = alphnum + 1
-            time.sleep(0.5)
+    encrypted = ""
+    for char in string:
+        if char in alphabet:
+            encrypted += encryption_key[alphabet.index(char)]
+        else:
+            encrypted += char
     print("your key is " + encryption_key)
     print("your string is " + encrypted)
 elif(choice == "I"):
