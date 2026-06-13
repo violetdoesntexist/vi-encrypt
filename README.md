@@ -2,6 +2,9 @@
 my little pretty unsafe text encryption tool made in python!!!
 
 # Usage
+## Install via pipx!
+pipx install viencrypt
+
 ## install needed modules
 install colorama and art via pip\
 pip install [package name]
@@ -10,7 +13,10 @@ pip install [package name]
 pull the repo and run main.py\
 cd [repo directory]\
 python main.py
-### other ways to run may be added later
+
+## Run exe file from releases
+self explanatory
+
 
 # How does this work :o?
 the encryption key is a shuffled version of the alphabet that gets resorted to the regular alphabet in decrption
