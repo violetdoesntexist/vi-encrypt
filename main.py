@@ -29,8 +29,9 @@ if(choice == "D"):
         else:
             decrypted += char
 
-    print("string " + string + " decrypted with key  " + encryption_key)
-    print("result " + decrypted)
+    print("string: " + string + " decrypted with key  " + encryption_key)
+    print("key: " + result)
+    print("result: " + decrypted)
 elif(choice == "E"):    
     encryption_key = ''.join(random.sample(alphabet, len(alphabet)))
     print("your key is:" + encryption_key)
@@ -41,8 +42,8 @@ elif(choice == "E"):
             encrypted += encryption_key[alphabet.index(char)]
         else:
             encrypted += char
-    print("your key is " + encryption_key)
-    print("your string is " + encrypted)
+    print("your key is: " + encryption_key)
+    print("your string is: " + encrypted)
 elif(choice == "I"):
     print(
         """made by violetdoesntexist
