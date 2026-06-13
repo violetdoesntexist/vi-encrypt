@@ -30,7 +30,7 @@ if(choice == "D"):
             decrypted += char
 
     print("string: " + string + " decrypted with key  " + encryption_key)
-    print("key: " + result)
+    print("key: " + encryption_key)
     print("result: " + decrypted)
 elif(choice == "E"):    
     encryption_key = ''.join(random.sample(alphabet, len(alphabet)))
