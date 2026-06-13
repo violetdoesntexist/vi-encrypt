@@ -36,11 +36,11 @@ elif(choice == "E"):
     string = input("enter string: ")
     while(alphnum > -1 ):
             encrypted = string.replace(alphabet[alphnum], encryption_key[alphnum] )
-            print("replaced " + encryption_key[alphnum] + " with " + alphabet[alphnum] + " " + encrypted)
+            print("replaced " + alphabet[alphnum] + " with " + encryption_key[alphnum] + " " + encrypted)
             alphnum = alphnum - 1
             time.sleep(0.5)
     print("your key is " + encryption_key)
-    print("your string is " + string)
+    print("your string is " + encrypted)
 elif(choice == "I"):
     print(
         """made by violetdoesntexist
