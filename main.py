@@ -19,7 +19,7 @@ print(
 )
 
 choice = input("choose:")
-if(choice == "E"):
+if(choice == "D"):
     encryption_key = input("enter key:")
     string = input("enter string:")
     while(alphnum > -1 ):
@@ -30,7 +30,7 @@ if(choice == "E"):
 
     print("string" + string + "encrypted with key" + encryption_key)
     print("result" + encrypted)
-elif(choice == "D"):    
+elif(choice == "E"):    
     encryption_key = ''.join(random.sample(alphabet, len(alphabet)))
     print("your key is:" + encryption_key)
     string = input("enter string:")
