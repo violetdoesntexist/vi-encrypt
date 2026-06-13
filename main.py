@@ -34,8 +34,9 @@ elif(choice == "E"):
     encryption_key = ''.join(random.sample(alphabet, len(alphabet)))
     print("your key is:" + encryption_key)
     string = input("enter string: ")
+    encrypted = string
     while(alphnum > -1 ):
-            encrypted = string.replace(alphabet[alphnum], encryption_key[alphnum] )
+            encrypted = encrypted.replace(alphabet[alphnum], encryption_key[alphnum] )
             print("replaced " + alphabet[alphnum] + " with " + encryption_key[alphnum] + " " + encrypted)
             alphnum = alphnum - 1
             time.sleep(0.5)
