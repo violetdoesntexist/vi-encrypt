@@ -6,8 +6,8 @@ from colorama import init, Fore, Back, Style
 import random
 
 
-alphabet = "abcdefghijklmnopqrstuvwxyzD"
-alphnum = int(25)
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphnum = int(-1)
 Art = text2art("VIENCRYPT", chr_ignore=True)
 print(Fore.MAGENTA + Art)
 
@@ -22,23 +22,24 @@ choice = input("choose: ")
 if(choice == "D"):
     encryption_key = input("enter key: ")
     string = input("enter string: ")
-    while(alphnum > -1 ):
-        decrypted = string.replace(encryption_key[alphnum], alphabet[alphnum] )
+    decrypted = string
+    while(alphnum < 25 ):
+        decrypted = decrypted.replace(encryption_key[alphnum], alphabet[alphnum] )
         print("replaced " + encryption_key[alphnum] + " with " + alphabet[alphnum] + " " + decrypted)
-        alphnum = alphnum - 1
+        alphnum = alphnum + 1
         time.sleep(0.5)
 
-    print("string " + string + " encrypted with key  " + encryption_key)
-    print("result " + encrypted)
+    print("string " + string + " decrypted with key  " + encryption_key)
+    print("result " + decrypted)
 elif(choice == "E"):    
     encryption_key = ''.join(random.sample(alphabet, len(alphabet)))
     print("your key is:" + encryption_key)
     string = input("enter string: ")
     encrypted = string
-    while(alphnum > -1 ):
+    while(alphnum < 25 ):
             encrypted = encrypted.replace(alphabet[alphnum], encryption_key[alphnum] )
             print("replaced " + alphabet[alphnum] + " with " + encryption_key[alphnum] + " " + encrypted)
-            alphnum = alphnum - 1
+            alphnum = alphnum + 1
             time.sleep(0.5)
     print("your key is " + encryption_key)
     print("your string is " + encrypted)
